@@ -16,8 +16,8 @@ foreground = #cdd6f4
 font-0 = BlexMono Nerd Font Mono:size=16
 bottom = true
 modules-left = i3
-modules-center = school_term  
-modules-right = location wifi battery date time
+modules-center = school_term 
+modules-right = location audio wifi battery date time
 module-margin = 1
 
 [module/i3]
@@ -86,3 +86,8 @@ label-charging-foreground = ${colors.green}
 label-discharging-foreground = ${colors.yellow}
 label-low-foreground = ${colors.red}
 
+[module/audio]
+type = custom/script
+exec = ~/.config/polybar/audio.sh
+interval = 1
+label = %{T3}%output%

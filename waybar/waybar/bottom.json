@@ -1,0 +1,70 @@
+{
+  "name": "status",
+  "layer": "top",
+  "position": "bottom",
+  "width": "100%",
+  "height": 50,
+  "gaps": 10,
+  "modules-left": ["custom/audio", "custom/steam"],
+  "modules-center": ["custom/window"],
+  "modules-right": ["temperature", "pulseaudio", "backlight", "battery", "clock"],
+  "fixed-center": true,
+
+  "custom/audio": {
+    "exec": "~/.config/waybar/scripts/playerctl.sh",
+    "interval": 5,
+    "return-type": "json",  
+    "signal": 1,
+    "on-click": "~/.config/waybar/scripts/playpause.sh && pkill -RTMIN+1 waybar",
+    "on-scroll-up": "echo $((($(cat /tmp/current_player_index) + 1))) > /tmp/current_player_index && pkill -RTMIN+1 waybar",
+    "on-scroll-down": "echo $((($(cat /tmp/current_player_index) - 1))) > /tmp/current_player_index && pkill -RTMIN+1 waybar",
+  },
+
+  "custom/steam": {
+    "exec": "~/.config/waybar/scripts/find_game.sh",
+    "interval": 1,
+    "return-type": "plain",
+    "tooltip": false
+  },
+
+  "custom/window": {
+    "exec": "~/.config/waybar/scripts/window_title.sh",
+    "interval": 1,
+    "tooltip": false,
+  },
+
+  "temperature": {
+    "format": " 󱥗 {temperatureC}°C ",
+    "interval": 1,
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": " 󱤕 {volume}% ",
+    "on-click": "pavucontrol",
+    "interval": 1,
+    "tooltip": false
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": " 󱥤 {percent}% ",
+    "interval": 1
+  },
+
+  "battery": {
+    "format": " 󱥵 {capacity}% ",
+    "interval": 1,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "tooltip-format": "󱥫󱤈 {time}"
+  },
+
+  "clock": {
+    "format": " 󱥫 {:%Y-%m-%d %H:%M:%S} ",
+    "interval": 1,
+    "tooltip": false
+  }
+}

@@ -30,7 +30,7 @@ player="${players[$current_index / 10 % ${#players[@]}]}"
 
 # Check the player's state and set metadata
 if [ -z "$player" ]; then
-    metadata=" 󱤂 󱤕󱤧󱤬󱤂 "
+    metadata=" 󱤕󱤧󱤬󱤂 "
 elif playerctl -p "$player" status 2>/dev/null | grep -q 'Playing'; then
     icon='󱤕'
     color="green"

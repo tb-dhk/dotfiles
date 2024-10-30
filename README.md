@@ -1,10 +1,41 @@
 # shua's config files
 
-feel free to use these as you'd like.
+this is a collection of my config files for various programs. these files are designed for swaywm and waybar on linux mint. these are my personal config files, so there is no guarantee that they will work on other systems.
 
-do note you will have to add `startup/startup.sh` to your ~/.bashrc.
+this configuration is heavily inspired by the [constructed language](https://conlang.org) [toki pona](https://tokipona.org) and its logographic writing system, [sitelen pona](https://sona.pona.la/wiki/sitelen_pona).
 
-you might also need to run `pip install -r startup/requirements.txt`.
+## features
+- swaywm
+    - new workspaces
+        - `mod` + `Ctrl` + number to switch to workspaces 11 to 20
+        - `mod` + `Ctrl` + `Shift` + number to move the current window to workspaces 11 to 20
+    - screenshotting
+        - `Print` to take a screenshot of the entire screen (already in default config)
+        - `mod` + `Print` to take a screenshot of the current window
+        - `Shift` + `Print` to take a screenshot of the current workspace
+        - add `Ctrl` to any of the above to save the screenshot to the clipboard
+- waybar
+    - top bar
+        - workspace numbers in sitelen pona (up to 20)
+        - "shua's computer" in sitelen pona
+        - notifications
+    - bottom bar
+        - left
+            - currently playing media
+            - active steam games
+        - center
+            - currently focused window
+        - right
+            - cpu temperature
+            - volume
+            - backlight brightness
+            - battery
+            - date and time
+
+## requirements
+- swaywm
+- waybar
+- fairfax hd and fairfax pona hd (fonts)
 
 ## important commands
 ```

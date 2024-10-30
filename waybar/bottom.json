@@ -7,7 +7,7 @@
   "gaps": 10,
   "modules-left": ["custom/audio", "custom/steam"],
   "modules-center": ["custom/window"],
-  "modules-right": ["temperature", "pulseaudio", "backlight", "battery", "clock"],
+  "modules-right": ["custom/temperature", "pulseaudio", "backlight", "battery", "clock"],
   "fixed-center": true,
 
   "custom/audio": {
@@ -33,10 +33,10 @@
     "tooltip": false,
   },
 
-  "temperature": {
-    "format": " 󱥗 {temperatureC}°C ",
+  "custom/temperature": {
+    "exec": "echo \"󱥗 $(sensors | grep 'Core 0' | awk '{print $3}' | tr -d '+')\"",
     "interval": 1,
-    "tooltip": false
+    "tooltip": false,
   },
 
   "pulseaudio": {

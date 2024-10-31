@@ -51,6 +51,10 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 - fairfax hd and fairfax pona hd (fonts)
 - python 3.10
 
+## credits
+- the desktop background image comes from the [music video for girls never die by tripleS](https://www.youtube.com/watch?v=2tda_TCjz8w)
+- the background image was edited using [catppuccin-factory](https://github.com/Fxzzi/catppuccin-factory)
+
 ## installation
 ```
 # clone the repository

@@ -41,10 +41,10 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 - waybar
 - fairfax hd and fairfax pona hd (fonts)
 
-## important commands
+## useful commands
 ```
 # cbonsai 
-cbonsai -L 50 -c "󱤗"
+cbonsai -L 50 -c "󱤗" # this is the glyph for "kasi"
 
 # neofetch
 neofetch --ascii ~/.config/neofetch/tokipona.txt --ascii_colors 4 3

@@ -269,7 +269,7 @@ input type:touchpad {
    middle_emulation enabled
 }
 
-exec_always swaybg -i ~/Pictures/cat/cat_celluloid-shot0001.jpg -m fil
+exec_always swaybg -i ~/.config/sway/background.jpg -m fill
 
 # Screenshot bindings
 bindsym Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh                     # Fullscreen

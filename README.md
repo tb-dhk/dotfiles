@@ -32,6 +32,8 @@ this configuration is heavily inspired by the [constructed language](https://con
             - battery
             - date and time
 
+![sample image containing features described above](./sample.png)
+
 ## requirements
 - swaywm
 - waybar

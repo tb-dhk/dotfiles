@@ -190,7 +190,7 @@ exec_always ~/.config/sway/scripts/gammastep-wrapper.sh
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+h splith
+    bindsym $mod+b splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -271,15 +271,16 @@ input type:touchpad {
 
 exec_always swaybg -i ~/Pictures/cat/cat_celluloid-shot0001.jpg -m fil
 
-# Screenshots
-bindsym Print exec grim "/home/$USER/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png"
-bindsym $mod+Print exec --no-startup-id ~/.config/sway/scripts/screenshot-active-window-save.sh 
-bindsym Shift+Print exec grim -g "$(slurp)" "/home/$USER/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png"
+# Screenshot bindings
+bindsym Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh                     # Fullscreen
+bindsym $mod+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --window        # Active window
+bindsym Shift+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --area         # Select area
 
-# Clipboard Screenshots
-bindsym Ctrl+Print exec grim "/home/$USER/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png" && wl-copy < "/home/$USER/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png"
-bindsym Ctrl+$mod+Print exec --no-startup-id ~/.config/sway/scripts/screenshot-active-window-save.sh && wl-copy < "/home/$USER/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png"
-bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" "/home/$USER/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png" && wl-copy < "/home/$USER/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png"
+# Clipboard screenshots
+bindsym Ctrl+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --clipboard     # Fullscreen to clipboard
+bindsym Ctrl+$mod+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --window --clipboard  # Active window to clipboard
+bindsym Ctrl+Shift+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --area --clipboard   # Select area to clipboard
+
 # touchpad
 exec --no-startup-id ~/.config/sway/scripts/toggle_touchpad.sh
 

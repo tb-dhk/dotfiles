@@ -1,4 +1,4 @@
-# shua's config files
+# tokifiles
 
 this is a collection of my config files for various programs. these files are designed for swaywm and waybar on linux mint. these are my personal config files, so there is no guarantee that they will work on other systems.
 

@@ -4,6 +4,8 @@ this is a collection of my config files for various programs. these files are de
 
 this configuration is heavily inspired by the [constructed language](https://conlang.org) [toki pona](https://tokipona.org) and its logographic writing system, [sitelen pona](https://sona.pona.la/wiki/sitelen_pona).
 
+i use linux mint and the colorscheme used here is [catppuccin](https://github.com/catppuccin/catppuccin).
+
 ## features
 - swaywm
     - new workspaces

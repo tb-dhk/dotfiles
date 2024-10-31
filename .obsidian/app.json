@@ -1,0 +1,15 @@
+{
+  "vimMode": true,
+  "strictLineBreaks": false,
+  "alwaysUpdateLinks": true,
+  "showIndentGuide": true,
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "tabSize": 2,
+  "autoPairBrackets": true,
+  "attachmentFolderPath": "./assets",
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "/dump",
+  "useMarkdownLinks": true
+}

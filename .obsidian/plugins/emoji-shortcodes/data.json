@@ -1,0 +1,12 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":thinking:",
+    ":white_check_mark:",
+    ":x:",
+    ":tm:"
+  ]
+}

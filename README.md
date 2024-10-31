@@ -34,12 +34,33 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
             - battery
             - date and time
 
+### sample images
 ![sample image containing features described above](./sample.png)
+![another sample image](./sample2.png)
 
-## requirements
+## configurations available for:
 - swaywm
 - waybar
+- alacritty
+- spicetify  
+- obsidian (in the `.obsidian` directory)
+- nvim (not shown)
+- starship (not shown)
+
+## requirements
 - fairfax hd and fairfax pona hd (fonts)
+- python 3.10
+
+## installation
+```
+# clone the repository
+git clone https://github.com/tb-dhk/dotfiles
+
+# copy the config files to the appropriate directories
+cp -r dotfiles/.config/* ~/.config/
+```
+
+do also copy `dotfiles/.obsidian` to your obsidian vault directory.
 
 ## useful commands
 ```

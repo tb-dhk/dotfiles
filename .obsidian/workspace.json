@@ -1,0 +1,253 @@
+{
+  "main": {
+    "id": "4ba95f16c4a1fa6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "184e3ce7bfe4315b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f110094141a64413",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "studying/중4/중국어/练习/pre-olevels/forum/feeding stray cats and dogs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "feeding stray cats and dogs"
+            }
+          },
+          {
+            "id": "674a135a9b082ab5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "toki pona grammar.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "toki pona grammar"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ca1c7fc1401d2cfe",
+    "type": "split",
+    "children": [
+      {
+        "id": "1ba0ef1db6ab3905",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f1594aaa9e8531df",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9662a238f78cfb22",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "volunteer",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "af18df873fd3cf17",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 340.01103591918945,
+    "collapsed": true
+  },
+  "right": {
+    "id": "005eaead0be949bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "c14697e43ee64167",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3d0e54d9715d1435",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "holidays 2024/activities/classical chinese/lesson 2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for lesson 2"
+            }
+          },
+          {
+            "id": "6553306b373ab881",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "holidays 2024/activities/classical chinese/lesson 2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from lesson 2"
+            }
+          },
+          {
+            "id": "e0a85e88a3624ee4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f5f6acfceaa6d1f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "holidays 2024/activities/classical chinese/lesson 2.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of lesson 2"
+            }
+          },
+          {
+            "id": "e8208c15db1c673f",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "c784f457db6bf526",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "peerdraft:Show my Peerdraft Shares": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-regex-pipeline:Regex Rulesets": false,
+      "obsidian-comments:Show Comments Panel": false
+    }
+  },
+  "active": "674a135a9b082ab5",
+  "lastOpenFiles": [
+    "studying/중4/중국어/练习/pre-olevels/forum/feeding stray cats and dogs.md",
+    "toki pona grammar.md",
+    "holidays 2024/study plan.md",
+    "studying/중4/중국어/练习/pre-olevels/paper 2/maris stella.md",
+    "studying/중4/중국어/练习/pre-olevels/forum/preservation of cultural artifacts.md",
+    "studying/중4/중국어/练习/pre-olevels/forum/roof garden.md",
+    "studying/중4/중국어/练习/pre-olevels/forum/art displays.md",
+    "studying/중4/중국어/练习/pre-olevels/paper 2/cckss.md",
+    "studying/중4/중국어/练习/pre-olevels/_Index_of_pre-olevels.md",
+    "studying/중4/중국어/练习/pre-olevels/cailiao/esss.md",
+    "studying/중4/중국어/练习/pre-olevels/cailiao/mfss.md",
+    "studying/중4/중국어/练习/pre-olevels/cailiao/plmgss.md",
+    "studying/중4/중국어/练习/pre-olevels/cailiao/bbss.md",
+    "studying/중4/중국어/练习/pre-olevels/cailiao/nchs.md",
+    "studying/중4/중국어/练习/pre-olevels/cailiao/_Index_of_cailiao.md",
+    "studying/중4/중국어/练习/pre-olevels/cailiao",
+    "studying/중4/중국어/练习/pre-olevels/Untitled.md",
+    "studying/중4/중국어/练习/pre-olevels/paper 2/rvhs.md",
+    "holidays 2024/activities/dots.md",
+    "holidays 2024/activities/_Index_of_activities.md",
+    "holidays 2024/dashboard.md",
+    "holidays 2024/_Index_of_holidays 2024.md",
+    "studying/중4/중국어/练习/pre-olevels/paper 2/dhs.md",
+    "studying/중4/중국어/练习/pre-olevels/narrative/你认为要实现自我就应该勇往直前,义无反顾,但是有一件事改变了你的看法。这件事让你深刻地认识到实现自我的同时也应该考虑到团队利益,必须找到两者的平衡点。.md",
+    "studying/중4/중국어/练习/pre-olevels/narrative/你家楼下的乐龄活动中心最近举办“乐龄就业计划”,鼓励年长者利用闲暇时间学习手工,制作简单的艺术品出售,以賺取一些零用钱。.md",
+    "studying/중4/중국어/练习/pre-olevels/narrative/最近发生的一件事,让你明白了太执着于心中所追求的,只会带来失望和痛苦,知足才能常乐。试描述这件事。.md",
+    "studying/중4/중국어/练习/pre-olevels/narrative/你的父母转换工作而变得更加繁忙,他们需要你承担更多的家庭责任。.md",
+    "studying/중4/중국어/练习/pre-olevels/narrative",
+    "studying/중4/중국어/练习/pre-olevels/paper 2",
+    "studying/중4/중국어/练习/pre-olevels/forum",
+    "studying/중4/중국어/练习/pre-olevels",
+    "assets/Untitled 1 3.png",
+    "music/unnamed group/training",
+    "holidays 2024/activities/classical chinese",
+    "holidays 2024/activities/marxist-leninist reading/stage 1 - introduction",
+    "holidays 2024/activities/marxist-leninist reading",
+    "holidays 2024/activities",
+    "idea dump/my feedback loop.canvas",
+    "music/unnamed group/unnamed release/songs/assets/Pasted image 20240928020420.png",
+    "music/unnamed group/unnamed release/songs/assets/Pasted image 20240928020420.png",
+    "Untitled 1.canvas",
+    "assets/(2)_tripleS_%ED%8A%B8%EB%A6%AC%ED%94%8C%EC%97%90%EC%8A%A4___dijkstra.jpeg",
+    "assets/Pasted image 20240823215803.png",
+    "assets/Pasted image 20240823215801.png"
+  ]
+}

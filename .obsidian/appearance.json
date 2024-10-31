@@ -1,0 +1,14 @@
+{
+  "cssTheme": "Catppuccin",
+  "enabledCssSnippets": [
+    "main",
+    "color",
+    "sitelen_pona"
+  ],
+  "interfaceFontFamily": "Helvetica Neue",
+  "textFontFamily": "Fairfax HD",
+  "monospaceFontFamily": "Fairfax HD",
+  "baseFontSize": 16,
+  "theme": "obsidian",
+  "accentColor": "#1e1e2e"
+}

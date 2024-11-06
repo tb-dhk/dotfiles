@@ -50,6 +50,8 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 ## requirements
 - fairfax hd and fairfax pona hd (fonts)
 - python 3.10
+- dmenu
+- alacritty
 
 ## credits
 - the desktop background image comes from the [music video for girls never die by tripleS](https://www.youtube.com/watch?v=2tda_TCjz8w)

@@ -2,8 +2,9 @@
 
 if pgrep -x "gammastep" > /dev/null
 then
+    pkill gammastep
     echo "gammastep is already running"
-else
-    gammastep set -O 2500
 fi
+
+gammastep set -O 2500
 

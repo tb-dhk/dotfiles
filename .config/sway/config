@@ -281,6 +281,9 @@ bindsym Ctrl+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --c
 bindsym Ctrl+$mod+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --window --clipboard  # Active window to clipboard
 bindsym Ctrl+Shift+Print exec --no-startup-id ~/.config/sway/scripts/screenshot.sh --area --clipboard   # Select area to clipboard
 
+# swaylock
+bindsym Ctrl+$mod+l exec swaylock -c ~/.config/swaylock/config
+
 # touchpad
 exec --no-startup-id ~/.config/sway/scripts/toggle_touchpad.sh
 

@@ -1,0 +1,4 @@
+[global]
+  format = ""
+  script = ~/.config/dunst/dunst.sh
+  always_run_script = true

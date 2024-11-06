@@ -48,7 +48,7 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 - starship (not shown)
 
 ## other requirements
-- fairfax hd and fairfax pona hd (fonts)
+- [fairfax hd and fairfax pona hd](https://www.kreativekorp.com/swdownload/fonts/core/fairfaxhd.zip) (fonts)
 - python 3.10
 - rofi
 

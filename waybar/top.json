@@ -1,0 +1,51 @@
+{
+  "name": "workspaces",
+  "layer": "bottom",
+  "position": "top",
+  "width": "100%",
+  "height": 50,
+  "gaps": 10,
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["custom/name"],
+  "modules-right": ["custom/notifs"],
+  "fixed-center": true,
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "wan",
+      "2": "tu",
+      "3": "tu+wan",
+      "4": "tu+tu",
+      "5": "luka",
+      "6": "luka+wan",
+      "7": "luka+tu",
+      "8": "luka+tu+wan",
+      "9": "luka+tu+tu",
+      "10": "luka+luka",
+      "11": "luka+luka+wan",
+      "12": "luka+luka+tu",
+      "13": "luka+luka+tu+wan",
+      "14": "luka+luka+tu+tu",
+      "15": "luka+luka+luka",
+      "16": "luka+luka+luka+wan",
+      "17": "luka+luka+luka+tu",
+      "18": "luka+luka+luka+tu+wan",
+      "19": "luka+luka+luka+tu+tu",
+      "20": "mute"
+    },
+    "enable-bar-scroll": true
+  },
+
+  "custom/name": {
+    "exec": "echo 'ilo-nanpa pi (jan[sewi unpa wile anpa])'"
+  },
+
+  "custom/notifs": {
+    "exec": "~/.config/waybar/scripts/notifs/notifs.sh",
+    "interval": 1,
+    "return-type": "json"
+  }
+}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if pgrep -x "gammastep" > /dev/null
+if [ -z $(pgrep -x "gammastep") ]
 then
     pkill gammastep
 fi

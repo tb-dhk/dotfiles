@@ -5,12 +5,9 @@ LOCAL_CONFIG="./.config/"
 HOME_CONFIG="$HOME/.config/"
 
 # Check if local config directory exists
-if [ ! -d "$LOCAL_CONFIG" ]; then
-  echo "Local config directory $LOCAL_CONFIG does not exist."
+if [ ! -d "$LOCAL_CONFIG" ] || [ ! -d "$HOME_CONFIG" ]; then
   exit 1
 fi
 
-# Sync files from local config to home config directory
-rsync -av "$HOME_CONFIG" "$LOCAL_CONFIG" 
-
-echo "Configuration files refreshed from $LOCAL_CONFIG to $HOME_CONFIG"
+# Sync files from home config to local config directory, only updating existing files
+rsync -av --existing "$HOME_CONFIG" "$LOCAL_CONFIG"

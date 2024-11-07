@@ -3,7 +3,7 @@ truncate_to_repo = false
 
 [directory.substitutions]
 "~/coding/" = "!/"
-"/var/home/shua" = "/samdbox/~"
+"/var/home" = "/sandbox"
 
 [git_branch]
 symbol = "🌱 "

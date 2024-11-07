@@ -5,4 +5,4 @@ then
     pkill gammastep
 fi
 
-gammastep set -O 3000
+gammastep set -O 2750

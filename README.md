@@ -41,6 +41,8 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 - waybar
 - alacritty
 - spicetify  
+- neofetch
+- fastfetch
 - obsidian (in the `.obsidian` directory)
 - nvim (not shown)
 - starship (not shown)
@@ -75,6 +77,8 @@ cbonsai -L 50 -c "󱤗" # this is the glyph for "kasi"
 
 # neofetch
 neofetch --ascii ~/.config/neofetch/tokipona.txt --ascii_colors 4 3
+# alternatively, fastfetch
+fastfetch --logo ~/.config/fastfetch/tokipona.txt --logo-color-1 blue --logo-color-2 yellow
 
 # unimatrix
 unimatrix -u "$(~/.config/scripts/sitelen-pona.sh)"

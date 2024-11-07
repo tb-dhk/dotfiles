@@ -3,7 +3,7 @@
   font-size: 20px;
 }
 
-window#waybar.top {
+window#waybar.top, #clock {
   font-family: "Fairfax Pona HD";
   background: #1e1e2e;
 }
@@ -27,7 +27,7 @@ window#waybar.bottom {
   color: #1e1e2e
 }
 
-#battery.charging, .green {
+#battery.charging, .green, #battery.charging.warning, #battery.charging.critical {
   background: #a6e3a1;
   color: #1e1e2e;
 }

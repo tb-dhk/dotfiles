@@ -5,13 +5,12 @@
   "width": "100%",
   "height": 50,
   "gaps": 10,
-  "modules-left": ["sway/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/name"],
   "modules-right": ["custom/notifs"],
   "fixed-center": true,
 
-  "sway/workspaces": {
-    "disable-scroll": true,
+  "hyprland/workspaces": {
     "all-outputs": true,
     "format": "{icon}",
     "format-icons": {

@@ -1,16 +1,13 @@
 # tokifiles
 
-this is a collection of my config files for various programs. these files are designed for swaywm and waybar on linux mint. these are my personal config files, so there is no guarantee that they will work on other systems.
+this is a collection of my config files for various programs. these files are designed for hyprland and waybar on linux mint. these are my personal config files, so there is no guarantee that they will work on other systems.
 
 this configuration is heavily inspired by the [constructed language](https://conlang.org) [toki pona](https://tokipona.org) and its logographic writing system, [sitelen pona](https://sona.pona.la/wiki/sitelen_pona).
 
 i use linux mint and the colorscheme used here is [catppuccin](https://github.com/catppuccin/catppuccin).
 
 ## features
-- swaywm
-    - new workspaces
-        - `mod` + `Ctrl` + number to switch to workspaces 11 to 20
-        - `mod` + `Ctrl` + `Shift` + number to move the current window to workspaces 11 to 20
+- hyprland
     - screenshotting
         - `Print` to take a screenshot of the entire screen (already in default config)
         - `mod` + `Print` to take a screenshot of the current window
@@ -39,19 +36,22 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 ![another sample image](./sample2.png)
 
 ## configurations available for:
-- swaywm
+- hyprland
 - waybar
 - alacritty
 - spicetify  
 - obsidian (in the `.obsidian` directory)
 - nvim (not shown)
 - starship (not shown)
+- sway (only for archival purposes, no longer maintained)
+- swaylock (only for archival purposes, no longer maintained)
 
 ## other requirements
 - [fairfax hd and fairfax pona hd](https://www.kreativekorp.com/swdownload/fonts/core/fairfaxhd.zip) (fonts)
 - python 3.10
 - dmenu
-- sensors
+- gammastep
+- lm-sensors
 
 ## credits
 - the desktop background image comes from the [music video for girls never die by tripleS](https://www.youtube.com/watch?v=2tda_TCjz8w)

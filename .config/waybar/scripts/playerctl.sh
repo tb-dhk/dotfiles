@@ -5,7 +5,7 @@ index_file="/tmp/current_player_index"
 
 # Function to escape special characters for GTK markup
 escape_markup() {
-    echo "$1" | sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g'
+    echo "$1" | sed 's/&/&amp;/g; s/</&lt;/g; s/>/&gt;/g; s/"/&quot;/g; s/'\''/&apos;/g'
 }
 
 # Sleep to allow state to stabilize
@@ -26,27 +26,38 @@ fi
 
 # Read the current index from the file
 current_index=$(cat "$index_file")
-player="${players[$current_index / 10 % ${#players[@]}]}"
+
+# Set the player
+if [ ${#players[@]} -gt 0 ]; then
+    player="${players[$current_index / 10 % ${#players[@]}]}"
+else
+    player=""
+fi
 
 # Check the player's state and set metadata
 if [ -z "$player" ]; then
-    metadata="󱤕󱤧󱤬󱤂"
-elif playerctl -p "$player" status 2>/dev/null | grep -q 'Playing'; then
+    metadata="󱤕󱤧󱤬󱤂"  # No player active
+else
+  if playerctl -p "$player" status 2>/dev/null | grep -q 'Playing'; then
     icon='󱤕'
     color="green"
-    metadata="${icon} $(playerctl -p "$player" metadata --format '{{ artist }} - {{ title }}' | tr '[:upper:]' '[:lower:]')"
-elif playerctl -p "$player" status 2>/dev/null | grep -q 'Paused'; then
+  elif playerctl -p "$player" status 2>/dev/null | grep -q 'Paused'; then
     icon='󱤈'
     color="orange"
-    metadata="${icon} $(playerctl -p "$player" metadata --format '{{ artist }} - {{ title }}' | tr '[:upper:]' '[:lower:]')" 
+  fi
+  # Fetch artist and title separately, escape them, and bold the artist
+  artist=$(playerctl -p "$player" metadata --format '{{ artist }}')
+  title=$(playerctl -p "$player" metadata --format '{{ title }}')
+  
+  artist_escaped=$(escape_markup "$artist" | tr '[:upper:]' '[:lower:]')
+  title_escaped=$(escape_markup "$title" | tr '[:upper:]' '[:lower:]')
+  
+  # Bold the artist using HTML tags
+  metadata="${icon} <b>${artist_escaped}</b> - ${title_escaped}"
 fi
 
-# Escape any special characters for GTK markup
-escaped_metadata=$(escape_markup "$metadata")
-
 # Limit the output to 50 characters and append "..." if necessary
-formatted_output=$(echo "$escaped_metadata" | awk '{if (length > 40) print substr($0, 1, 37) "..."; else print $0}')
+formatted_output=$(echo "$metadata" | awk '{if (length > 40) print substr($0, 1, 37) "..."; else print $0}')
 
 # Print the final output: color, icon, and formatted metadata
-printf '{"text": "%s", "class": "%s"}\n' " $formatted_output " "$color"
-
+printf '{"text": " %s ", "class": "%s"}\n' "$formatted_output" "$color"

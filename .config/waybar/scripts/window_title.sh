@@ -1,24 +1,24 @@
 #!/bin/bash
 
-# Get the current focused window details
-window_info=$(swaymsg -t get_tree | jq -r '.. | select(.focused? == true) | {name: .name, app_id: .app_id, window: .window_properties.class}')
+# Get the active workspace info
+workspace_info=$(hyprctl activewindow -j)
 
-# Extract app_id and window name
-app_id=$(echo "$window_info" | jq -r '.app_id')
-window_name=$(echo "$window_info" | jq -r '.name')
+# Extract the last window ID and title
+window_id=$(echo "$workspace_info" | jq -r '.title')
+window_name=$(echo "$workspace_info" | jq -r '.initialTitle')
 
-# Check if app_id is null or "none" and use app_id as fallback'
-if [ "$app_id" == "null" ] || [ "$app_id" == "none" ]; then
-    app_id=$(echo "$window_info" | jq -r '.window')
+# Check if window_id is null or "none" and use workspace id as fallback
+if [ "$window_id" == "null" ] || [ "$window_id" == "none" ]; then
+    window_id=$(echo "$workspace_info" | jq -r '.id')
 fi
 
-# Check if app_id is null or "none" and use app_id as fallback'
-if [ "$app_id" == "null" ] || [ "$app_id" == "none" ]; then
-    # get the workspace number instead
+# Format the output
+if [ "$window_id" == "null" ] || [ "$window_id" == "none" ]; then
+    # If no window is found, display the workspace ID
     formatted_title="󱤎󱤧󱤬󱤂"
 else
-    # Format the output
-    formatted_title="󱤎 <b>$app_id</b> - $window_name"
+    # If a window is found, format the output as <window_id> - <window_name>
+    formatted_title="󱤎 <b>$window_id</b> - $window_name"
 
     # Convert to lowercase
     formatted_title=$(echo "$formatted_title" | tr '[:upper:]' '[:lower:]')

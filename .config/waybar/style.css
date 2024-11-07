@@ -1,6 +1,6 @@
 * {
   color: #cdd6f4;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 window#waybar.top {
@@ -43,15 +43,15 @@ window#waybar.bottom {
 }
 
 #workspaces button {
-  min-width: 0;
+  min-width: 30px;
   border-radius: 25px
 }
 
-#workspaces button.focused {
+#workspaces button.active {
   background: #cdd6f4;
 }
 
-#workspaces button.focused > * {
+#workspaces button.active > * > * {
   color: #1e1e2e;
 }
 

@@ -11,6 +11,6 @@ if [ ! -d "$LOCAL_CONFIG" ]; then
 fi
 
 # Sync files from local config to home config directory
-rsync -av "$LOCAL_CONFIG" "$HOME_CONFIG"
+rsync -av "$HOME_CONFIG" "$LOCAL_CONFIG" 
 
 echo "Configuration files refreshed from $LOCAL_CONFIG to $HOME_CONFIG"

@@ -37,6 +37,7 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 
 ## configurations available for:
 - hyprland
+- hyprlock
 - waybar
 - alacritty
 - spicetify  

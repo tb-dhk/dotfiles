@@ -38,8 +38,9 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
             - date and time
 
 ### sample images
-![sample image containing features described above](./sample.png)
-![another sample image](./sample2.png)
+![sample image containing waybar and terminals](./sample.png)
+![sample image containing firefox (github), obsidian and nvim (lunarvim)](./sample2.png)
+![sample image of hyprlock](./sample3.png)
 
 ## configurations available for:
 - hypr
@@ -51,7 +52,7 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 - neofetch
 - fastfetch
 - obsidian (in the `.obsidian` directory)
-- nvim (not shown)
+- nvim
 - starship (not shown)
 - spicetify (not maintained)
 - sway (only for archival purposes, no longer maintained)

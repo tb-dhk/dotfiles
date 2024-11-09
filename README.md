@@ -7,12 +7,18 @@ this configuration is heavily inspired by the [constructed language](https://con
 i use linux mint and the colorscheme used here is [catppuccin](https://github.com/catppuccin/catppuccin).
 
 ## features
-- hyprland
-    - screenshotting
+- hypr 
+    - screenshotting (hyprland)
         - `Print` to take a screenshot of the entire screen (already in default config)
         - `mod` + `Print` to take a screenshot of the current window
         - `Shift` + `Print` to take a screenshot of the current workspace
         - add `Ctrl` to any of the above to save the screenshot to the clipboard
+    - hyprlock
+        - show time and greeting in sitelen pona
+    - hypridle
+        - lock after 5 minutes
+        - screen off after 10 minutes
+        - suspend after 15 minutes
 - waybar
     - top bar
         - workspace numbers in sitelen pona (up to 20)
@@ -36,16 +42,18 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
 ![another sample image](./sample2.png)
 
 ## configurations available for:
-- hyprland
-- hyprlock
+- hypr
+  - hyprland
+  - hyprlock
+  - hypridle
 - waybar
 - alacritty
-- spicetify  
 - neofetch
 - fastfetch
 - obsidian (in the `.obsidian` directory)
 - nvim (not shown)
 - starship (not shown)
+- spicetify (not maintained)
 - sway (only for archival purposes, no longer maintained)
 - swaylock (only for archival purposes, no longer maintained)
 

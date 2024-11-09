@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "we tried" >> "$HOME/.config/dunst/script_test.log"
-
 # Set log file path
 LOG_FILE="$HOME/notifications.log"
 
@@ -13,7 +11,6 @@ ICON="${4:-dialog-information}"
 # make urgency lowercase
 URGENCY=$(echo "${5:-normal}" | tr '[:upper:]' '[:lower:]')
 
-echo "execution of script :3" >> "$HOME/.config/dunst/script_test.log"
 echo $APP_NAME $SUMMARY $BODY $ICON $URGENCY
 
 # Write to the log file in the specified format

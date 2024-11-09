@@ -10,7 +10,6 @@ last_percentage=$(echo "$battery_status" | grep -oP '(?<=\().*(?=%\))' || echo "
 while true; do
     # Get current battery status and percentage, and handle if empty
     battery_status=$($BATTERY_SCRIPT 2>/dev/null)
-    echo "battery_status: $battery_status"
     
     # Check if battery_status output is empty and skip this loop if so
     if [[ -z "$battery_status" ]]; then
@@ -21,7 +20,6 @@ while true; do
     # Extract current state and percentage safely, defaulting to unknown values if not found
     current_state=$(echo "$battery_status" | grep -oP '(?<=battery ).*(?= \()' || echo "unknown")
     current_percentage=$(echo "$battery_status" | grep -oP '(?<=\().*(?=%\))' || echo "0")
-    echo "current_state: $current_state"    
 
     # Check for state changes and notify
     if [[ "$current_state" != "$last_state" ]]; then
@@ -30,13 +28,15 @@ while true; do
         elif [[ $current_state == "discharging" ]]; then
           notify-send -u normal "Battery" "discharging ($current_percentage%)"
         fi
-    fi
 
-    # Check for critical battery level warnings and notify
-    if (( current_percentage <= 10 && current_percentage != last_percentage )); then
-        notify-send -u critical "Battery" "Battery is at $current_percentage%!"
-    elif (( current_percentage <= 20 && current_percentage != last_percentage )); then
-        notify-send -u normal "Battery" "Battery is at $current_percentage%."
+        if [[ $current_state -lt $last_state ]]; then
+            # Check for critical battery level warnings and notify
+            if (( current_percentage <= 10 && current_percentage != last_percentage )); then
+                notify-send -u critical "Battery" "Battery is at $current_percentage%!"
+            elif (( current_percentage <= 20 && current_percentage != last_percentage )); then
+                notify-send -u normal "Battery" "Battery is at $current_percentage%."
+            fi
+        fi
     fi
 
     # Update last known percentage

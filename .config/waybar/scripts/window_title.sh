@@ -4,8 +4,8 @@
 workspace_info=$(hyprctl activewindow -j)
 
 # Extract the last window ID and title
-window_id=$(echo "$workspace_info" | jq -r '.title')
-window_name=$(echo "$workspace_info" | jq -r '.initialTitle')
+window_id=$(echo "$workspace_info" | jq -r '.initialTitle')
+window_name=$(echo "$workspace_info" | jq -r '.title')
 
 # Check if window_id is null or "none" and use workspace id as fallback
 if [ "$window_id" == "null" ] || [ "$window_id" == "none" ]; then

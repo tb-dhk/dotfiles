@@ -34,7 +34,7 @@
   },
 
   "custom/temperature": {
-    "exec": "echo \"󱥗 $(sensors | grep 'Core 0' | awk '{print $3}' | tr -d '+')\"",
+    "exec": "echo \" 󱥗 $(sensors | grep 'Core 0' | awk '{print $3}' | tr -d '+') \"",
     "interval": 1,
     "tooltip": false,
   },

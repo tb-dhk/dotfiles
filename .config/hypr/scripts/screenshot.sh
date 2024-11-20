@@ -8,6 +8,15 @@ TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
 COPY_TO_CLIPBOARD=false
 MODE="fullscreen"
 
+# Check and save current Hyprshade state
+HYPRSHADE_STATE=$(hyprshade current)
+if [ -n "$HYPRSHADE_STATE" ]; then
+  hyprshade off
+  RESTORE_HYPRSHADE=true
+else
+  RESTORE_HYPRSHADE=false
+fi
+
 # Process command line arguments
 while [[ "$#" -gt 0 ]]; do
   case $1 in
@@ -38,6 +47,11 @@ esac
 # Copy to clipboard if --clipboard is specified
 if [ "$COPY_TO_CLIPBOARD" = true ]; then
   wl-copy < "$FILE"
+fi
+
+# Restore Hyprshade if it was previously enabled
+if [ "$RESTORE_HYPRSHADE" = true ]; then
+  hyprshade on $HYPRSHADE_STATE
 fi
 
 echo "Screenshot saved to $FILE"

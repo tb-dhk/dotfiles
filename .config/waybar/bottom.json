@@ -7,7 +7,7 @@
   "gaps": 10,
   "modules-left": ["custom/audio", "custom/steam"],
   "modules-center": ["custom/window"],
-  "modules-right": ["custom/temperature", "pulseaudio", "backlight", "battery", "clock"],
+  "modules-right": ["custom/temperature", "custom/pulseaudio", "backlight", "battery", "clock"],
   "fixed-center": true,
 
   "custom/audio": {
@@ -39,11 +39,11 @@
     "tooltip": false,
   },
 
-  "pulseaudio": {
-    "format": " 󱤕 {volume}% ",
+  "custom/pulseaudio": {
     "on-click": "pavucontrol",
     "interval": 1,
-    "tooltip": false
+    "tooltip": false,
+    "exec": "if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then echo ' 󱤂 0% '; else echo \" 󱤕 $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}') \"; fi"
   },
 
   "backlight": {

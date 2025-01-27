@@ -41,7 +41,7 @@ else
       last_urgency="normal"
   fi
 
-  formatted_text=" <span foreground=\\\"#cdd6f4\\\">󱤌󱥝</span> $formatted_text "
+  formatted_text=" <span foreground=\\\"#cdd6f4\\\">󱤌‍󱥝</span> $formatted_text "
 fi
 
 # Output JSON format

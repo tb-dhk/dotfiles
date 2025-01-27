@@ -35,7 +35,9 @@
       "19": "luka+luka+luka+tu+tu",
       "20": "mute"
     },
-    "enable-bar-scroll": true
+    "enable-bar-scroll": true,
+    "persistent-workspaces": {
+    }
   },
 
   "custom/name": {

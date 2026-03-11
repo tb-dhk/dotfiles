@@ -1,23 +1,24 @@
 {
   "name": "status",
-  "layer": "top",
+  "layer": "bottom",
   "position": "bottom",
   "width": "100%",
   "height": 50,
   "gaps": 10,
+  "spacing": 4,
   "modules-left": ["custom/audio", "custom/steam"],
   "modules-center": ["custom/window"],
-  "modules-right": ["custom/temperature", "custom/pulseaudio", "backlight", "battery", "clock"],
+  "modules-right": ["custom/pulseaudio", "custom/backlight", "custom/battery", "custom/clock"],
   "fixed-center": true,
 
   "custom/audio": {
     "exec": "~/.config/waybar/scripts/playerctl.sh",
-    "interval": 5,
+    "interval": 1,
     "return-type": "json",  
     "signal": 1,
     "on-click": "~/.config/waybar/scripts/playpause.sh && pkill -RTMIN+1 waybar",
     "on-scroll-up": "echo $((($(cat /tmp/current_player_index) + 1))) > /tmp/current_player_index && pkill -RTMIN+1 waybar",
-    "on-scroll-down": "echo $((($(cat /tmp/current_player_index) - 1))) > /tmp/current_player_index && pkill -RTMIN+1 waybar",
+    "on-scroll-down": "echo $((($(cat /tmp/current_player_index) - 1))) > /tmp/current_player_index && pkill -RTMIN+1 waybar"
   },
 
   "custom/steam": {
@@ -30,40 +31,39 @@
   "custom/window": {
     "exec": "~/.config/waybar/scripts/window_title.sh",
     "interval": 1,
-    "tooltip": false,
-  },
-
-  "custom/temperature": {
-    "exec": "echo \" 󱥗 $(sensors | grep 'Core 0' | awk '{print $3}' | tr -d '+') \"",
-    "interval": 1,
-    "tooltip": false,
+    "tooltip": false
   },
 
   "custom/pulseaudio": {
-    "on-click": "pavucontrol",
+    "exec": "~/.config/waybar/scripts/volume.sh",
     "interval": 1,
     "tooltip": false,
-    "exec": "if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then echo ' 󱤂 0% '; else echo \" 󱤕 $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}') \"; fi"
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle; hyprctl dispatch redraw",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -1%; hyprctl dispatch redraw",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +1%; hyprctl dispatch redraw"
   },
 
-  "backlight": {
-    "device": "intel_backlight",
-    "format": " 󱥤 {percent}% ",
-    "interval": 1
-  },
-
-  "battery": {
-    "format": " 󱥵 {capacity}% ",
+  "custom/backlight": {
+    "exec": "echo \" 󱥤$(brightnessctl | grep -oE '[0-9]+%' | sed 's/%//' | xargs python3 ~/.config/waybar/scripts/nnp.py) \"",
     "interval": 1,
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set 2%-",
+    "on-scroll-down": "brightnessctl set +2%"
+  },
+
+  "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery.sh",
+    "return-type": "json",  
+    "interval": 1,
+    "tooltip": false,
     "states": {
       "warning": 20,
       "critical": 10
-    },
-    "tooltip-format": "󱥫󱤈 {time}"
+    }
   },
 
-  "clock": {
-    "format": " 󱥫 {:%Y..%m..%d %H::%M::%S} ",
+  "custom/clock": {
+    "exec": "echo \" 󱥫$(date +'%Y󱦜%m󱦜%d󱦜%H󱦝%M󱦝%S' | xargs -I {} python3 ~/.config/waybar/scripts/nnp.py {} 4.1.2.2.2.2 ) \"",
     "interval": 1,
     "tooltip": false
   }

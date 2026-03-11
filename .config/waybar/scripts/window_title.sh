@@ -5,7 +5,6 @@ workspace_info=$(hyprctl activewindow -j)
 
 # Extract the last window ID and title
 window_id=$(echo "$workspace_info" | jq -r '.initialTitle')
-window_name=$(echo "$workspace_info" | jq -r '.title')
 
 # Check if window_id is null or "none" and use workspace id as fallback
 if [ "$window_id" == "null" ] || [ "$window_id" == "none" ]; then
@@ -18,7 +17,7 @@ if [ "$window_id" == "null" ] || [ "$window_id" == "none" ]; then
     formatted_title="󱤎󱤧󱤬󱤂"
 else
     # If a window is found, format the output as <window_id> - <window_name>
-    formatted_title="󱤎 <b>$window_id</b> - $window_name"
+    formatted_title="󱤎 $window_id"
 
     # Convert to lowercase
     formatted_title=$(echo "$formatted_title" | tr '[:upper:]' '[:lower:]')

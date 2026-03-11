@@ -27,17 +27,17 @@ window#waybar.bottom {
   color: #1e1e2e
 }
 
-#battery.charging, .green, #battery.charging.warning, #battery.charging.critical {
+.green {
   background: #a6e3a1;
   color: #1e1e2e;
 }
 
-#battery.warning {
+.yellow {
   background: #f9e2af;
   color: #1e1e2e;
 }
 
-#battery.critical {
+.red {
   background: #f38ba8;
   color: #1e1e2e;
 }

@@ -4,7 +4,7 @@ this is a collection of my config files for various programs. these files are de
 
 this configuration is heavily inspired by the [constructed language](https://conlang.org) [toki pona](https://tokipona.org) and its logographic writing system, [sitelen pona](https://sona.pona.la/wiki/sitelen_pona).
 
-i use linux mint and the colorscheme used here is [catppuccin](https://github.com/catppuccin/catppuccin).
+i use fedora sway atomic with hyprland. the colorscheme used here is [catppuccin](https://github.com/catppuccin/catppuccin).
 
 ## features
 - hypr 
@@ -31,38 +31,16 @@ i use linux mint and the colorscheme used here is [catppuccin](https://github.co
         - center
             - currently focused window
         - right
-            - cpu temperature
             - volume
             - backlight brightness
             - battery
             - date and time
 
 ### sample images
+note: the following images are based on [.config/hypr/background.jpg](https://raw.githubusercontent.com/tb-dhk/dotfiles/refs/heads/main/.config/hypr/background.jpg). the default background image is now  [.config/hypr/background.png](https://raw.githubusercontent.com/tb-dhk/dotfiles/refs/heads/main/.config/hypr/background.png)
 ![sample image containing waybar and terminals](./sample.png)
 ![sample image containing firefox (github), obsidian and nvim (lunarvim)](./sample2.png)
 ![sample image of hyprlock](./sample3.png)
-
-## configurations available for:
-- hypr
-  - hyprland
-  - hyprlock
-  - hypridle
-- waybar
-- alacritty
-- neofetch
-- fastfetch
-- obsidian (in the `.obsidian` directory)
-- nvim
-- starship (not shown)
-- spicetify (not maintained)
-- sway (only for archival purposes, no longer maintained)
-- swaylock (only for archival purposes, no longer maintained)
-
-## other requirements
-- [fairfax hd and fairfax pona hd](https://www.kreativekorp.com/swdownload/fonts/core/fairfaxhd.zip) (fonts)
-- dmenu
-- gammastep
-- lm-sensors
 
 ## credits
 - the desktop background image comes from the [music video for girls never die by tripleS](https://www.youtube.com/watch?v=2tda_TCjz8w)
